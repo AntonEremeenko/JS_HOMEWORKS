@@ -2,11 +2,8 @@
 
 // Task #1
 
-let admin;
-let name;
-
-name = 'John';
-admin = name;
+const name = 'John';
+const admin = name;
 
 alert(admin);
 
