@@ -13,7 +13,7 @@
 // }
 
 // 3.
-// let num = prompt('Введіть ціле число');
+// let num = +prompt('Введіть ціле число');
 // for (let i = 1; i <= 100; i++) {
 //     if (i ** 2 <= num) {
 //         console.log(i);
@@ -21,7 +21,7 @@
 // }
 
 // 4.
-// const number = prompt('Введіть ціле число');
+// const number = +prompt('Введіть ціле число');
 // let isPrime = number;
 // for (let i = 2; i < number; i++) {
 //     if (number % i === 0) {
