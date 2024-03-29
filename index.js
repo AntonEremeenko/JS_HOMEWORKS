@@ -13,5 +13,5 @@ const foo = function (numb1, numb2, sign) {
     if (sign === 'mult') {
         return console.log(`${numb1} * ${numb2} = ${numb1 * numb2}`);
     }
-}
+};
 foo(2, 3, 'add');
