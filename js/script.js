@@ -1,21 +1,19 @@
-'use strict';
+const flat = function (arr) {
+    let result = [];
+    if (arguments.length > 1) {
+        throw new Error(
+            'Function accepts only 1 argument, too much arguments provided'
+        );
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (!Array.isArray(arr[i])) {
+            result.push(arr[i]);
+        } else {
+            result = result.concat(flat(arr[i]));
+        }
+    }
+    return result;
+};
 
-const operand1 = +prompt('Enter the first number:');
-const operand2 = +prompt('Enter second number:');
-
-if (!isNaN(operand1) && !isNaN(operand2)) {
-    console.log(
-        `Результат: ${operand1} + ${operand2} = ${operand1 + operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} - ${operand2} = ${operand1 - operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} * ${operand2} = ${operand1 * operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} / ${operand2} = ${operand1 / operand2}`
-    );
-} else {
-    console.log('Something is wrong, please enter numbers.');
-}
+console.log(flat([1, 2, [3.1, 3.2, [3.21, 3.22]], 4]));
+console.log(flat([5, [6, [7, [8, 9]]]], [8, 9]));
