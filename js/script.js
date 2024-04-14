@@ -1,21 +1,22 @@
-'use strict';
+const factorial = function (n) {
+    if (n === 1 || n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+};
+console.log(factorial(3));
 
-const operand1 = +prompt('Enter the first number:');
-const operand2 = +prompt('Enter second number:');
+const pow = function (num, deg) {
+    if (deg === 0) return 1;
+    return num * pow(num, deg - 1);
+};
 
-if (!isNaN(operand1) && !isNaN(operand2)) {
-    console.log(
-        `Результат: ${operand1} + ${operand2} = ${operand1 + operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} - ${operand2} = ${operand1 - operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} * ${operand2} = ${operand1 * operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} / ${operand2} = ${operand1 / operand2}`
-    );
-} else {
-    console.log('Something is wrong, please enter numbers.');
-}
+console.log(pow(2, 5));
+
+const sum = function (a, b) {
+    if (b < 0 || a < 0) return 0;
+    if (b === 0) return a;
+    return sum(++a, b - 1);
+};
+console.log(sum(2, 5));
