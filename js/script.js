@@ -1,21 +1,25 @@
-'use strict';
+const user = {
+    name: 'Vova',
+    lastName: 'Doe',
+    age: '27',
+};
 
-const operand1 = +prompt('Enter the first number:');
-const operand2 = +prompt('Enter second number:');
+const getFullName = function (prefix = 'Ms') {
+    return prefix + ' ' + this.name + ' ' + this.lastName;
+};
 
-if (!isNaN(operand1) && !isNaN(operand2)) {
-    console.log(
-        `Результат: ${operand1} + ${operand2} = ${operand1 + operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} - ${operand2} = ${operand1 - operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} * ${operand2} = ${operand1 * operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} / ${operand2} = ${operand1 / operand2}`
-    );
-} else {
-    console.log('Something is wrong, please enter numbers.');
+const usr1Name = getFullName.bind(user, 'Mr');
+
+console.log(usr1Name());
+
+function myBind(f, context, ...preArgs) {
+    return function (...args) {
+        preArgs = preArgs.concat(args);
+        context.blindedFunction = f;
+        return context.blindedFunction(...preArgs);
+    };
 }
+
+const usr2Name = myBind(getFullName, user, 'Mr');
+
+console.log(usr2Name());
