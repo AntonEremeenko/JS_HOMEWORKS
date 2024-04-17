@@ -1,21 +1,18 @@
-'use strict';
+const user = {
+    name: 'Vova',
+    lastName: 'Doe',
+    age: '27',
+};
 
-const operand1 = +prompt('Enter the first number:');
-const operand2 = +prompt('Enter second number:');
+const getFullName = function (prefix = 'Ms') {
+    return prefix + ' ' + this.name + ' ' + this.lastName;
+};
+const usr1Name = getFullName.apply(user, ['Mr']);
 
-if (!isNaN(operand1) && !isNaN(operand2)) {
-    console.log(
-        `Результат: ${operand1} + ${operand2} = ${operand1 + operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} - ${operand2} = ${operand1 - operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} * ${operand2} = ${operand1 * operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} / ${operand2} = ${operand1 / operand2}`
-    );
-} else {
-    console.log('Something is wrong, please enter numbers.');
-}
+console.log(usr1Name);
+
+const myApply = function (f, context, args = []) {
+    context.bindedFunction = f;
+    return context.bindedFunction(...args);
+};
+console.log(myApply(getFullName, user, ['Mr']));
