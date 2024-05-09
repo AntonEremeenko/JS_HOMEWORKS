@@ -1,21 +1,25 @@
-'use strict';
+(function () {
+    const arr = [1, 2, [1.1, 1.2, 1.3], 3];
 
-const operand1 = +prompt('Enter the first number:');
-const operand2 = +prompt('Enter second number:');
+    const generateList = function (array) {
+        if (array.length === 0) {
+            return;
+        }
 
-if (!isNaN(operand1) && !isNaN(operand2)) {
-    console.log(
-        `Результат: ${operand1} + ${operand2} = ${operand1 + operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} - ${operand2} = ${operand1 - operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} * ${operand2} = ${operand1 * operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} / ${operand2} = ${operand1 / operand2}`
-    );
-} else {
-    console.log('Something is wrong, please enter numbers.');
-}
+        const ul = document.createElement('ul');
+
+        for (let i = 0; i < array.length; i++) {
+            const li = document.createElement('li');
+            if (Array.isArray(array[i])) {
+                li.appendChild(generateList(array[i]));
+            } else {
+                li.innerHTML = array[i];
+            }
+            ul.appendChild(li);
+        }
+        return ul;
+    };
+    const result = generateList(arr);
+    document.body.appendChild(result);
+    console.log(result);
+})();
