@@ -3,21 +3,115 @@
     <head>
         <meta charset="UTF-8" />
         <title>Title</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
-            quae.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
-            quae.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
-            quae.
-        </p>
-
+<div class="container">
+    <div class="block1">
+        <ul id="categories" class="selectable-list">
+            <li data-next-block = 'categoriesComputers'>Laptops and computers</li>
+            <li data-next-block = 'categoriesGamers'>Goods for gamers</li>
+            <li data-next-block = 'categoriesHome'>Home goods</li>
+            <li data-next-block = 'categoriesAnimalS'>Animals</li>
+        </ul>
+    </div>
+    <div class="block2">
+        <ul id="categoriesComputers" class="selectable-list">
+            <li data-next-block = 'laptop buy-button'>Laptops</li>
+            <li data-next-block = 'computer buy-button'>Computers</li>
+            <li data-next-block = 'monitor buy-button'>Monitors</li>
+            <li data-next-block = 'tablet buy-button'>Tablets</li>
+            <li data-next-block = 'computer-items buy-button'>Computer items</li>
+        </ul>
+        <ul id="categoriesGamers" class="selectable-list">
+            <li data-next-block = 'laptop buy-button'>Laptops</li>
+            <li data-next-block = 'computer buy-button'>Computers</li>
+            <li data-next-block = 'monitor buy-button'>Monitors</li>
+            <li data-next-block = 'console buy-button'>Consoles</li>
+            <li data-next-block = 'chair buy-button'>Chairs</li>
+        </ul>
+        <ul id="categoriesHome" class="selectable-list">
+            <li data-next-block = 'dish buy-button'>Dishes</li>
+            <li data-next-block = 'furniture buy-button'>Furniture</li>
+            <li data-next-block = 'lightning buy-button'>Lightning</li>
+            <li data-next-block = 'plumbing buy-button'>Plumbing</li>
+            <li data-next-block = 'clocks buy-button'>Clocks</li>
+        </ul>
+        <ul id="categoriesAnimalS" class="selectable-list">
+            <li data-next-block = 'cat buy-button'>Cats</li>
+            <li data-next-block = 'dog buy-button'>Dogs</li>
+            <li data-next-block = 'bird buy-button'>Birds</li>
+            <li data-next-block = 'rodents buy-button'>Rodents</li>
+        </ul>
+    </div>
+    <div class="block3">
+        <div id="laptop">
+            <h2 class="name">Lenovo</h2>
+            <p class="description">Legion</p>
+        </div>
+        <div id="computer">
+            <h2 class="name">Asus</h2>
+            <p class="description">Rog</p>
+        </div>
+        <div id="monitor">
+            <h2 class="name">Monitor</h2>
+            <p class="description">M1</p>
+        </div>
+        <div id="tablet">
+            <h2 class="name">Samsung</h2>
+            <p class="description">Galaxy</p>
+        </div>
+        <div id="computer-items">
+            <h2 class="name">SSD</h2>
+            <p class="description">Kingston</p>
+        </div>
+        <div id="console">
+            <h2 class="name">Sony</h2>
+            <p class="description">PlayStation 5</p>
+        </div>
+        <div id="chair">
+            <h2 class="name">Razer</h2>
+            <p class="description">Iskur</p>
+        </div>
+        <div id="dish">
+            <h2 class="name">Flask</h2>
+            <p class="description">Small</p>
+        </div>
+        <div id="furniture">
+            <h2 class="name">Box</h2>
+            <p class="description">For flowers</p>
+        </div>
+        <div id="lightning">
+            <h2 class="name">Lamp</h2>
+            <p class="description">Small</p>
+        </div>
+        <div id="plumbing">
+            <h2 class="name">Tap</h2>
+            <p class="description">Iron</p>
+        </div>
+        <div id="clocks">
+            <h2 class="name">GShock</h2>
+            <p class="description">2100</p>
+        </div>
+        <div id="cat">
+            <h2 class="name">Dvorova</h2>
+            <p class="description">White</p>
+        </div>
+        <div id="dog">
+            <h2 class="name">Dvorova</h2>
+            <p class="description">Big</p>
+        </div>
+        <div id="bird">
+            <h2 class="name">Pigeon</h2>
+            <p class="description">Dvorovoy</p>
+        </div>
+        <div id="rodents">
+            <h2 class="name">Rat</h2>
+            <p class="description">Black</p>
+        </div>
+        <button id="buy-button">Buy</button>
+    </div>
+</div>
         <script src="./js/script.js"></script>
     </body>
 </html>

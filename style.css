@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.container div {
+    width: 33%;
+    font-size: 25px;
+}
+.block2 ul, .block3 div, .block3 button {
+    display: none;
+}
+
+.shown {
+    display: block !important;
+}
+.color {
+    color: blue;
+}
+
+
+.block1 {
+    background-color: lemonchiffon;
+}
+.block2 {
+    background-color: aliceblue;
+}
+.block3 {
+    background-color: #5e4411;
+}
