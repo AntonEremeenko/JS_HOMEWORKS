@@ -1,21 +1,37 @@
 'use strict';
 
-const operand1 = +prompt('Enter the first number:');
-const operand2 = +prompt('Enter second number:');
+(function () {
+    let arr = [1, 2, 3, 4];
+    const itr = function (arr) {
+        const dataArr = Array.from(arr);
+        let currenIndex = 0;
 
-if (!isNaN(operand1) && !isNaN(operand2)) {
-    console.log(
-        `Результат: ${operand1} + ${operand2} = ${operand1 + operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} - ${operand2} = ${operand1 - operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} * ${operand2} = ${operand1 * operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} / ${operand2} = ${operand1 / operand2}`
-    );
-} else {
-    console.log('Something is wrong, please enter numbers.');
-}
+        return {
+            next() {
+                let done = false;
+
+                if (currenIndex + 1 > dataArr.length) {
+                    done = true;
+                }
+
+                const result = {
+                    value: dataArr[currenIndex],
+                    done,
+                };
+
+                currenIndex += 1;
+
+                return result;
+            },
+        };
+    };
+
+    const show = itr(arr);
+    console.log(show);
+
+    console.log(show.next());
+    console.log(show.next());
+    console.log(show.next());
+    console.log(show.next());
+    console.log(show.next());
+})();
