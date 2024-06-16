@@ -1,7 +1,7 @@
 {
     "name": "js_homeworks",
     "version": "1.0.0",
-    "description": "Homework 4",
+    "description": "Homework 71",
     "main": "index.js",
     "scripts": {
         "test": "test"
@@ -12,6 +12,8 @@
     "author": "Anton",
     "license": "ISC",
     "dependencies": {
+        "bootstrap": "^5.3.3",
+        "bootstrap-icons": "^1.11.3",
         "lodash": "^4.17.21",
         "prettier": "^3.2.5"
     },
