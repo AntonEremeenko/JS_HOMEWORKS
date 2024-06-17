@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,9 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo List</title>
     <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/styles/css/home-page.css">
 </head>
+
 <body>
 
 <main>
@@ -23,19 +25,11 @@
                         <input type="text" name="title" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label  class="form-label">Task body</label>
-                        <textarea>
-                            name="description"
-                            class="form-control"
-                            placeholder="Task body"
-                            cols="30"
-                            rows="10"
-                        ></textarea>
+                        <label class="form-label">Task body</label>
+                        <textarea name="description" class="form-control" placeholder="Task body" cols="30"
+                                  rows="10"></textarea>
                     </div>
-                    <button
-                        type="submit"
-                        class="btn btn-primary"
-                    >
+                    <button type="submit" class="btn btn-primary">
                         Submit
                     </button>
                 </form>
@@ -47,7 +41,8 @@
         </div>
     </div>
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+         aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Details</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -69,4 +64,5 @@
 <script src="./src/scripts/todoList/Controller.js" type="module" defer></script>
 <script src="./src/scripts/todoList/index.js" type="module" defer></script>
 </body>
+
 </html>
