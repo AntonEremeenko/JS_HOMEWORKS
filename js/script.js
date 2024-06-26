@@ -1,21 +1,15 @@
-'use strict';
+import Cache from './Cache.js';
 
-const operand1 = +prompt('Enter the first number:');
-const operand2 = +prompt('Enter second number:');
+const slowFunction = (num) => {
+    console.log(`Processing ${num}`);
+    return num * 2;
+};
 
-if (!isNaN(operand1) && !isNaN(operand2)) {
-    console.log(
-        `Результат: ${operand1} + ${operand2} = ${operand1 + operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} - ${operand2} = ${operand1 - operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} * ${operand2} = ${operand1 * operand2}`
-    );
-    console.log(
-        `Результат: ${operand1} / ${operand2} = ${operand1 / operand2}`
-    );
-} else {
-    console.log('Something is wrong, please enter numbers.');
-}
+const cachedSlowFunction = Cache(slowFunction);
+
+console.log(cachedSlowFunction(5));
+console.log(cachedSlowFunction(5));
+console.log(cachedSlowFunction(8));
+console.log(cachedSlowFunction(8));
+console.log(cachedSlowFunction(10));
+console.log(cachedSlowFunction(10));
