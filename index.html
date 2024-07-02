@@ -3,21 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <title>Title</title>
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     </head>
     <body>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
-            quae.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
-            quae.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
-            quae.
-        </p>
 
-        <script src="./js/script.js"></script>
+    <main class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Post Id</span>
+                        <input data-input type="number" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-5" data-post-container></div>
+                <div class="col-4" data-comments-container></div>
+            </div>
+        </div>
+    </main>
+
+
+        <script src="./js/index.js" type="module"></script>
     </body>
 </html>
