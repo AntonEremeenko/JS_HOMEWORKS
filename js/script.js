@@ -1,1 +1,3 @@
-'use strict';
+import Albums from './Albums.js';
+
+new Albums()
